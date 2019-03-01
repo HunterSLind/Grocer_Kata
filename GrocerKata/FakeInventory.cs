@@ -17,11 +17,11 @@ namespace GrocerKata
 
     public class FakeInventoryItem
     {
-        string Name { get; set; }
-        decimal PricePerUnit { get; set; }
-        decimal MarkDownPrice { get; set; }
-        decimal SpecialPrice { get; set; }
-        decimal SpecialLimit { get; set; }
+        public string Name { get; set; }
+        public decimal PricePerUnit { get; set; }
+        public decimal MarkDownPrice { get; set; }
+        public decimal SpecialPrice { get; set; }
+        public decimal SpecialLimit { get; set; }
 
         public FakeInventoryItem(string name, decimal pricePerUnit, decimal markdownPrice, decimal specialPrice, decimal specialLimit)
         {

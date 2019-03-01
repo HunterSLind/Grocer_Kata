@@ -20,7 +20,7 @@ namespace Kata_Tests
         {
             decimal newPrice = 6.99m;
             priceMan.UpdateItemPrice("hamburger", newPrice);
-            Assert.AreEqual(6.99m, FakeInventory.Inventory["hamburger"]);
+            Assert.AreEqual(6.99m, FakeInventory.Inventory["hamburger"].PricePerUnit);
         }
     }
 }
