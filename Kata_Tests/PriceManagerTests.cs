@@ -22,5 +22,13 @@ namespace Kata_Tests
             priceMan.UpdateItemPrice("hamburger", newPrice);
             Assert.AreEqual(6.99m, FakeInventory.Inventory["hamburger"].PricePerUnit);
         }
+
+        [TestMethod]
+        public void UpdateSpecialPrice()
+        {
+            decimal newSpecialPrice = 3.99m;
+            priceMan.UpdateItemSpecialPrice("hamburger", newSpecialPrice);
+            Assert.AreEqual(3.99m, FakeInventory.Inventory["hamburger"].SpecialPrice);
+        }
     }
 }
