@@ -29,5 +29,10 @@ namespace GrocerKata
                 Items[itemID] += weight;
             }
         }
+
+        public void RemoveItem(string itemID)
+        {
+            
+        }
     }
 }

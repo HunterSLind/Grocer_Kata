@@ -46,5 +46,14 @@ namespace Kata_Tests
             testCart.AddItem("hamburger", weight);
             Assert.AreEqual(2.48m, testCart.Items["hamburger"]);
         }
+
+        [TestMethod]
+        public void RemoveItemFromCart()
+        {
+            testCart.AddItem("apple");
+            testCart.RemoveItem("apple");
+            Assert.AreEqual(0, testCart.Items["apple"]);
+
+        }
     }
 }
