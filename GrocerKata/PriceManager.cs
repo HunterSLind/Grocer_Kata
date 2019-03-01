@@ -13,7 +13,7 @@ namespace GrocerKata
 
         public void UpdateItemSpecialPrice(string itemID, decimal price)
         {
-
+            FakeInventory.Inventory[itemID].SpecialPrice = price;
         }
     }
 }
