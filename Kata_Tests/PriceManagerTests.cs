@@ -1,6 +1,6 @@
-﻿using System;
+﻿using GrocerKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GrocerKata;
+using System.Collections.Generic;
 
 namespace Kata_Tests
 {
@@ -45,6 +45,18 @@ namespace Kata_Tests
             decimal newLimit = 1;
             priceMan.UpdateItemSpecialLimit("hamburger", newLimit);
             Assert.AreEqual(1, FakeInventory.Inventory["hamburger"].SpecialLimit);
+        }
+
+        [TestCleanup]
+        public void CleanUp()
+        {
+            FakeInventory.Inventory = new Dictionary<string, FakeInventoryItem>
+            {
+                {"hamburger", new FakeInventoryItem("hamburger", 5.99m, -1, -1, 0) },
+                {"apple", new FakeInventoryItem("apple", 2.99m, 1.99m, -1, 0) },
+                {"banana", new FakeInventoryItem("banana", 1.49m, -1m, 0.99m, 0) },
+                {"soup", new FakeInventoryItem("soup", 2.49m, -1m, 1.99m, 5) }
+            };
         }
     }
 }
