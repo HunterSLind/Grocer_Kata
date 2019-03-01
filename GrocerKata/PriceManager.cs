@@ -18,7 +18,7 @@ namespace GrocerKata
 
         public void UpdateItemSpecialLimit(string itemID, decimal limit)
         {
-            
+            FakeInventory.Inventory[itemID].SpecialLimit = limit;
         }
 
         public void UpdateItemMarkdownPrice(string itemID, decimal price)
