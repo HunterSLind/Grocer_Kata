@@ -34,5 +34,12 @@ namespace Kata_Tests
             cart.AddItem("apple");
             Assert.AreEqual(1.99m, PriceCalculator.CalculateCartPrice(cart));
         }
+
+        [TestMethod]
+        public void PriceCartWithSpecialItem()
+        {
+            cart.AddItem("banana");
+            Assert.AreEqual(0.99, PriceCalculator.CalculateCartPrice(cart));
+        }
     }
 }
