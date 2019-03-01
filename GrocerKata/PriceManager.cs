@@ -8,7 +8,7 @@ namespace GrocerKata
     {
         public void UpdateItemPrice(string itemID, decimal price)
         {
-
+            FakeInventory.Inventory[itemID].PricePerUnit = price;
         }
     }
 }
