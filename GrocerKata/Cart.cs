@@ -37,7 +37,7 @@ namespace GrocerKata
 
         public void RemoveItem(string itemID, decimal weight)
         {
-            
+            Items[itemID] -= weight;
         }
     }
 }
