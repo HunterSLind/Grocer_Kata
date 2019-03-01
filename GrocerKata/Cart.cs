@@ -8,7 +8,7 @@ namespace GrocerKata
         public Dictionary<string, int> Items = new Dictionary<string, int>();
         public void AddItem(string itemID)
         {
-
+            Items.Add(itemID, 1);
         }
     }
 }
