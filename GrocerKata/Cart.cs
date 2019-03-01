@@ -17,5 +17,10 @@ namespace GrocerKata
                 Items[itemID] += 1;
             }
         }
+
+        public void AddItem(string itemID, decimal weight)
+        {
+
+        }
     }
 }

@@ -28,7 +28,14 @@ namespace Kata_Tests
             testCart.AddItem("apple");
             testCart.AddItem("apple");
             Assert.AreEqual(2, testCart.Items["apple"]);
+        }
 
+        [TestMethod]
+        public void AddItemToCartWithWeight()
+        {
+            decimal weight = 1.24m;
+            testCart.AddItem("hamburger", weight);
+            Assert.AreEqual(1.24m, testCart.Items["hamburger"]);
         }
     }
 }
