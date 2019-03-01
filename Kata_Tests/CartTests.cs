@@ -53,7 +53,15 @@ namespace Kata_Tests
             testCart.AddItem("apple");
             testCart.RemoveItem("apple");
             Assert.AreEqual(0, testCart.Items["apple"]);
+        }
 
+        [TestMethod]
+        public void RemoveItemFromCartWithWeight()
+        {
+            decimal weight = 1.24m;
+            testCart.AddItem("hamburger", weight);
+            testCart.RemoveItem("hamburger", weight);
+            Assert.AreEqual(0, testCart.Items["hamburger"]);
         }
     }
 }
