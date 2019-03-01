@@ -38,5 +38,13 @@ namespace Kata_Tests
             priceMan.UpdateItemMarkdownPrice("hamburger", newMarkdownPrice);
             Assert.AreEqual(1.99m, FakeInventory.Inventory["hamburger"].MarkDownPrice);
         }
+
+        [TestMethod]
+        public void UpdateSpecialLimit()
+        {
+            decimal newLimit = 1;
+            priceMan.UpdateItemSpecialLimit("hamburger", newLimit);
+            Assert.AreEqual(1, FakeInventory.Inventory["hamburger"].SpecialLimit);
+        }
     }
 }
