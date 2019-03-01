@@ -5,7 +5,7 @@ namespace GrocerKata
 {
     public class Cart
     {
-        public Dictionary<string, int> Items = new Dictionary<string, int>();
+        public Dictionary<string, decimal> Items = new Dictionary<string, decimal>();
         public void AddItem(string itemID)
         {
             if (!Items.ContainsKey(itemID))
