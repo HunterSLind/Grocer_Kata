@@ -41,5 +41,12 @@ namespace Kata_Tests
             cart.AddItem("banana");
             Assert.AreEqual(0.99m, PriceCalculator.CalculateCartPrice(cart));
         }
+
+        [TestMethod]
+        public void PriceCartWithWeightedItem()
+        {
+            cart.AddItem("hamburger", 1.23m); // this should cost 1.23*5.99= 7.3677 rounded up = 7.37
+            Assert.AreEqual(7.37, PriceCalculator.CalculateCartPrice(cart));
+        }
     }
 }
