@@ -20,7 +20,7 @@ namespace GrocerKata
 
         public void AddItem(string itemID, decimal weight)
         {
-
+            Items.Add(itemID, weight);
         }
     }
 }
