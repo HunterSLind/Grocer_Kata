@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GrocerKata
 {
@@ -9,11 +7,11 @@ namespace GrocerKata
         public static decimal CalculateCartPrice(Cart cart)
         {
             decimal price = 0;
-            foreach(var item in cart.Items)
+            foreach (var item in cart.Items)
             {
                 decimal thisItemPrice = 0.00m;
                 FakeInventoryItem inventoryItem = FakeInventory.Inventory[item.Key];
-                if(inventoryItem.SpecialPrice > 0)
+                if (inventoryItem.SpecialPrice > 0)
                 {
                     thisItemPrice = inventoryItem.SpecialPrice;
                 }
@@ -25,7 +23,7 @@ namespace GrocerKata
                 {
                     thisItemPrice = inventoryItem.PricePerUnit;
                 }
-                price += thisItemPrice;
+                price += Math.Round(thisItemPrice * item.Value, 2, MidpointRounding.AwayFromZero);
             }
             return price;
         }
