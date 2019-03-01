@@ -8,7 +8,13 @@ namespace GrocerKata
     {
         public static decimal CalculateCartPrice(Cart cart)
         {
-            return 0;
+            decimal price = 0;
+            foreach(var item in cart.Items)
+            {
+                decimal thisItemPrice = FakeInventory.Inventory[item.Key].PricePerUnit;
+                price += thisItemPrice;
+            }
+            return price;
         }
     }
 }

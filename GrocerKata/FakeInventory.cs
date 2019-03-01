@@ -26,7 +26,7 @@ namespace GrocerKata
         public FakeInventoryItem(string name, decimal pricePerUnit, decimal markdownPrice, decimal specialPrice, decimal specialLimit)
         {
             Name = name;
-            PricePerUnit = PricePerUnit;
+            PricePerUnit = pricePerUnit;
             MarkDownPrice = markdownPrice;
             SpecialPrice = specialPrice;
             SpecialLimit = specialLimit;
