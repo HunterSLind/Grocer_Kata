@@ -8,7 +8,7 @@ namespace GrocerKata
     {
         public static decimal CalculateCartPrice(Cart cart)
         {
-            return -1;
+            return 0;
         }
     }
 }
