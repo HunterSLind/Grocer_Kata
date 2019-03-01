@@ -48,5 +48,17 @@ namespace Kata_Tests
             cart.AddItem("hamburger", 1.23m); // this should cost 1.23*5.99= 7.3677 rounded up = 7.37
             Assert.AreEqual(7.37m, PriceCalculator.CalculateCartPrice(cart));
         }
+
+        [TestMethod]
+        public void PriceCartWithMoreThanSpecialLimit()
+        {
+            cart.AddItem("soup");
+            cart.AddItem("soup");
+            cart.AddItem("soup");
+            cart.AddItem("soup");
+            cart.AddItem("soup"); // 1.99 * 5 = 9.95;
+            cart.AddItem("soup"); // 9.95 + 2.49 = 12.44
+            Assert.AreEqual(12.44m, PriceCalculator.CalculateCartPrice(cart));
+        }
     }
 }
