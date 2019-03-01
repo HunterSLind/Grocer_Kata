@@ -15,6 +15,35 @@ namespace GrocerKata
         };
     }
 
+    public static class FakeDeals
+    {
+        public static Dictionary<string, SpecialtyDeal> SpecialtyDictionary = new Dictionary<string, SpecialtyDeal>
+        {
+            {"banana", new SpecialtyDeal("apple", 4, "banana", 2, 0.50m, 1) } // buy 4 apples get 2 bananas for 50 cents, redeemable once
+        };
+    }
+
+    public class SpecialtyDeal
+    {
+        public string Buy { get; set; }
+        public decimal BuyNum { get; set; }
+
+        public string Get { get; set; }
+        public decimal GetNum { get; set; }
+        public decimal GetFor { get; set; }
+
+        public decimal MaxTimes { get; set; }
+
+        public SpecialtyDeal(string buy, decimal buyNum, string get, decimal getNum, decimal getFor, decimal maxTimes)
+        {
+            Buy = buy;
+            BuyNum = buyNum;
+            Get = get;
+            GetFor = getFor;
+            MaxTimes = maxTimes;
+        }
+    }
+
     public class FakeInventoryItem
     {
         public string Name { get; set; }
@@ -31,5 +60,7 @@ namespace GrocerKata
             SpecialPrice = specialPrice;
             SpecialLimit = specialLimit;
         }
+
+
     }
 }
