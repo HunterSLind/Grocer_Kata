@@ -32,7 +32,7 @@ namespace GrocerKata
 
         public void RemoveItem(string itemID)
         {
-            
+            Items[itemID] -= 1;
         }
     }
 }
