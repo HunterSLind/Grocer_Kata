@@ -12,17 +12,18 @@ namespace GrocerKata
             foreach(var item in cart.Items)
             {
                 decimal thisItemPrice = 0.00m;
-                if(FakeInventory.Inventory[item.Key].SpecialPrice > 0)
+                FakeInventoryItem inventoryItem = FakeInventory.Inventory[item.Key];
+                if(inventoryItem.SpecialPrice > 0)
                 {
-                    thisItemPrice = FakeInventory.Inventory[item.Key].SpecialPrice;
+                    thisItemPrice = inventoryItem.SpecialPrice;
                 }
-                else if (FakeInventory.Inventory[item.Key].MarkDownPrice > 0)
+                else if (inventoryItem.MarkDownPrice > 0)
                 {
-                    thisItemPrice = FakeInventory.Inventory[item.Key].MarkDownPrice;
+                    thisItemPrice = inventoryItem.MarkDownPrice;
                 }
                 else
                 {
-                    thisItemPrice = FakeInventory.Inventory[item.Key].PricePerUnit;
+                    thisItemPrice = inventoryItem.PricePerUnit;
                 }
                 price += thisItemPrice;
             }
