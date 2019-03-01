@@ -15,5 +15,10 @@ namespace GrocerKata
         {
             FakeInventory.Inventory[itemID].SpecialPrice = price;
         }
+
+        public void UpdateItemMarkdownPrice(string itemID, decimal price)
+        {
+
+        }
     }
 }
