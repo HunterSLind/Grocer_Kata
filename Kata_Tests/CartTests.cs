@@ -7,9 +7,9 @@ namespace Kata_Tests
     public class PriceTests
     {
         [TestMethod]
-        public void CheckItemPrice_1()
+        public void AddItemToCart()
         {
-
+            
         }
     }
 }

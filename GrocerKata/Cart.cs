@@ -2,7 +2,8 @@
 
 namespace GrocerKata
 {
-    public class Class1
+    public class Cart
     {
+        
     }
 }
