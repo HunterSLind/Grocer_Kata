@@ -13,6 +13,13 @@ namespace GrocerKata
                 FakeInventoryItem inventoryItem = FakeInventory.Inventory[item.Key];
                 if (inventoryItem.SpecialPrice > 0)
                 {
+                    // if the special limit is less than the number of this item in cart
+                    if (inventoryItem.SpecialLimit < item.Value && inventoryItem.SpecialLimit > 0)
+                    {
+                        thisItemPrice += Math.Round(inventoryItem.SpecialPrice * inventoryItem.SpecialLimit, 2, MidpointRounding.AwayFromZero);
+                        thisItemPrice += Math.Round(inventoryItem.PricePerUnit * (item.Value - inventoryItem.SpecialLimit), 2, MidpointRounding.AwayFromZero);
+                        return thisItemPrice;
+                    }
                     thisItemPrice = inventoryItem.SpecialPrice;
                 }
                 else if (inventoryItem.MarkDownPrice > 0)
