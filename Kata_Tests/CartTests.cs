@@ -21,5 +21,14 @@ namespace Kata_Tests
             testCart.AddItem("apple");
             Assert.AreEqual(1, testCart.Items["apple"]);
         }
+
+        [TestMethod]
+        public void AddItemsToCart()
+        {
+            testCart.AddItem("apple");
+            testCart.AddItem("apple");
+            Assert.AreEqual(2, testCart.Items["apple"]);
+
+        }
     }
 }
